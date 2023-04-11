@@ -1,2 +1,3 @@
 # task
-Refactor a Controller to a 3-layer architecture
+1. Refactor the controller to a 3-layer architecture
+2. Write tests
