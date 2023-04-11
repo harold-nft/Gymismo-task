@@ -8,3 +8,6 @@
 ## Part 2: Refactoring
 1. Refactor the controller to a 3-layer architecture
 2. Write tests
+
+## Part 3: Submit
+Send report, refactored code and resume to task@gymismo.com 🙂
