@@ -7,47 +7,44 @@
 const { Model } = require("sequelize");
 
 module.exports = (sequelize, DataTypes) => {
-    class QuestionTypes extends Model {
-        static associate(models) {
-        }
+  class QuestionTypes extends Model {
+    static associate(models) {
     }
-    QuestionTypes.init(
-        {
-            id: {
-                allowNull: false,
-                autoIncrement: true,
-                primaryKey: true,
-                type: DataTypes.INTEGER.UNSIGNED,
-            },
-            name: {
-                type: DataTypes.STRING,
-                allowNull: false,
-                unique: {
-                    args: true,
-                }
-            },
-            type: {
-                type: DataTypes.STRING,
-                allowNull: false,
-                unique: {
-                    args: true,
-                }
-            },
-            activated: {
-                type: DataTypes.BOOLEAN,
-                allowNull: false,
-                defaultValue: true
-            },
-            deleted: {
-                type: DataTypes.BOOLEAN,
-                allowNull: false,
-                defaultValue: false
-            },
-        },
-        {
-            sequelize,
-            modelName: "question_types",
-        }
-    );
-    return QuestionTypes;
+  }
+  QuestionTypes.init(
+    {
+      id: {
+        allowNull: false,
+        autoIncrement: true,
+        primaryKey: true,
+        type: DataTypes.INTEGER.UNSIGNED,
+      },
+      name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        unique: true
+      },
+      type: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        unique: true
+      },
+      activated: {
+        type: DataTypes.BOOLEAN,
+        allowNull: false,
+        defaultValue: true
+      },
+      deleted: {
+        type: DataTypes.BOOLEAN,
+        allowNull: false,
+        defaultValue: false
+      },
+    },
+    {
+      sequelize,
+      modelName: "question_types",
+    }
+  );
+  return QuestionTypes;
+
 };
